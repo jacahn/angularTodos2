@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="todoApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Angular App</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="app.js"></script>
+  </head>
+  <body ng-controller="todoCtrl as vm">
+    <div ng-repeat="todo in vm.todos">
+      <p>{{$index + 1}}. {{todo.name}} - {{todo.completed}}</p>
+
+    </div>
+    <div>
+      <input type="text" ng-model="vm.newTodo">
+      <button ng-click="vm.addTodo()">Add todo</button>
+      <p>User input: {{vm.newTodo}}</p>
+
+    </div>
+      <!-- <p>First todo: {{vm.todos[0]}}</p> -->
+    <!-- {{4+5}} -->
+  </body>
+</html>
